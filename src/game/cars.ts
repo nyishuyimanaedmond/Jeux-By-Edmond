@@ -1,0 +1,98 @@
+import type { Car } from "./types";
+
+export const CARS: Car[] = [
+  {
+    id: "rouge",
+    name: "Voiture Rouge",
+    bodyColor: "#e63946",
+    accentColor: "#1d3557",
+    requiredLevel: 1,
+    stats: { topSpeed: 65, acceleration: 60, braking: 55, handling: 62 },
+    description: "Voiture équilibrée et fiable pour bien démarrer.",
+  },
+  {
+    id: "bleue",
+    name: "Voiture Bleue",
+    bodyColor: "#0077b6",
+    accentColor: "#03045e",
+    requiredLevel: 1,
+    stats: { topSpeed: 68, acceleration: 58, braking: 60, handling: 65 },
+    description: "Bonne maniabilité pour les débutants.",
+  },
+  {
+    id: "noire",
+    name: "Voiture Noire",
+    bodyColor: "#222831",
+    accentColor: "#393e46",
+    requiredLevel: 2,
+    stats: { topSpeed: 72, acceleration: 65, braking: 63, handling: 60 },
+    description: "Élégante et puissante sur l'autoroute.",
+  },
+  {
+    id: "blanche",
+    name: "Voiture Blanche",
+    bodyColor: "#f1faee",
+    accentColor: "#a8dadc",
+    requiredLevel: 2,
+    stats: { topSpeed: 70, acceleration: 62, braking: 68, handling: 66 },
+    description: "Excellents freins et bon contrôle.",
+  },
+  {
+    id: "sport",
+    name: "Edmond Sport",
+    bodyColor: "#06d6a0",
+    accentColor: "#118ab2",
+    requiredLevel: 4,
+    stats: { topSpeed: 78, acceleration: 72, braking: 65, handling: 70 },
+    description: "Sportive agile pour routes sinueuses.",
+  },
+  {
+    id: "course",
+    name: "Voiture de Course",
+    bodyColor: "#f72585",
+    accentColor: "#7209b7",
+    requiredLevel: 6,
+    stats: { topSpeed: 85, acceleration: 80, braking: 70, handling: 68 },
+    description: "Conçue pour la compétition et la vitesse pure.",
+  },
+  {
+    id: "supercar",
+    name: "Supercar",
+    bodyColor: "#ffbe0b",
+    accentColor: "#fb5607",
+    requiredLevel: 8,
+    stats: { topSpeed: 90, acceleration: 85, braking: 72, handling: 75 },
+    description: "Performance exceptionnelle pour les experts.",
+  },
+  {
+    id: "suv",
+    name: "SUV",
+    bodyColor: "#52796f",
+    accentColor: "#354f52",
+    requiredLevel: 5,
+    stats: { topSpeed: 70, acceleration: 55, braking: 75, handling: 58 },
+    description: "Robuste et stable sur tous les terrains.",
+  },
+  {
+    id: "rapide",
+    name: "Voiture Rapide",
+    bodyColor: "#3a86ff",
+    accentColor: "#001845",
+    requiredLevel: 10,
+    stats: { topSpeed: 95, acceleration: 90, braking: 68, handling: 72 },
+    description: "Vitesse maximale pour les niveaux avancés.",
+  },
+  {
+    id: "premium",
+    name: "Voiture Premium",
+    bodyColor: "#b5179e",
+    accentColor: "#f72585",
+    requiredLevel: 14,
+    stats: { topSpeed: 100, acceleration: 95, braking: 85, handling: 80 },
+    description: "La voiture ultime. Performance maximale dans tous les domaines.",
+  },
+];
+
+export function getCarById(id: string): Car | undefined {
+  return CARS.find((c) => c.id === id);
+}
